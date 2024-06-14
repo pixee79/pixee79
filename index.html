@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스파르타플릭스</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        * {
+            font-family: "Nanum Pen Script", cursive;
+
+        }
+
+        .main {
+            color: white;
+
+            background-image: url('file:///D:/phj.jpg');
+            background-position: 50% 20%;
+            background-size: cover;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .mypostingbox {
+            width: 400px;
+            margin: 20px auto 20px auto;
+
+            border: 1px solid white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .mycards {
+            width: 1400px;
+            margin: 20px auto 20px auto;
+        }
+
+
+
+        .form-floating>input {
+            background-color: transparent;
+            color: white;
+        }
+
+        .form-floating>label {
+            color: white;
+        }
+
+        .input-group>label {
+            background-color: transparent;
+            color: white;
+        }
+
+        .mypostingbox>button {
+            width: 100%;
+        }
+    </style>
+    <script>
+      function openclose() {
+        $('#postingbox').toggle();
+      }
+
+    </script>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">spartaflix</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">홈</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">시리즈</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">사진</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">내가 찜한 콘텐츠</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">나의추억</h1>
+                <p class="col-md-8 fs-4">재경워크샵 바다낚시 생애 최대 광어를 낚다.</p>
+                <button onclick="openclose()" type="button" class="btn btn-outline-light">기록하기</button>
+                <button type="button" class="btn btn-outline-light">상세정보</button>
+            </div>
+        </div>
+    </div>
+    <div class="mypostingbox" id="postingbox">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="이미지 주소">
+            <label for="floatingInput">이미지 주소</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="제목">
+            <label for="floatingInput">제목</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>별점선택</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="추천이유">
+            <label for="floatingInput">추천이유</label>
+        </div>
+        <button type="button" class="btn btn-danger">기록하기</button>
+    </div>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="file:///D:/phj1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">광어낚시 1등</h5>
+                        <p class="card-text">⭐⭐⭐</p>
+                        <p class="card-text">코멘트</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="file:///D:/phj2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">이제는 나홀로 회사</h5>
+                        <p class="card-text">⭐⭐⭐</p>
+                        <p class="card-text">코멘트</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="file:///D:/phj3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">뒤에 누구?</h5>
+                        <p class="card-text">⭐⭐⭐</p>
+                        <p class="card-text">코멘트</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="file:///D:/phj4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">해맑을 때가 있었지</h5>
+                        <p class="card-text">⭐⭐⭐</p>
+                        <p class="card-text">코멘트</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
